@@ -1,4 +1,4 @@
-﻿// Задача: Написать программу, которая из имеющегося
+// Задача: Написать программу, которая из имеющегося
 // массива строк формирует новый массив из строк, 
 // длина которых меньше, либо равна 3 символам. 
 // Первоначальный массив можно ввести с клавиатуры, 
@@ -67,27 +67,3 @@ string[] GetArray(string words)
                 break;
             }
         }
-
-        massive[k] = temp;
-        k++;
-    }
-    return massive;
-}
-
-string[] MakeArray3Symbols(string[] array)
-{
-
-    for (int i = 0; i < array.Length; i++)
-    {
-        if (array[i].Length > 3)
-        {
-            for (int s = i; s < array.Length - 1; s++)
-            {
-                array[s] = array[s + 1];
-            }
-            Array.Resize(ref array, array.Length - 1);
-            i --;
-        }  
-    }
-    return array;
-}
